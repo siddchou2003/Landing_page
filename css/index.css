@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #222;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    background-color: #333;
+    list-style: none;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    display: block;
+    color: white;
+    text-decoration: auto;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.hero {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn-1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #fff;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn-1:hover {
+    background: #f2f2f2;
+    color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.cta-btn-2 {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn-2:hover {
+    background: #339eff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.feature {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .nav-container {
+        flex: 1 1 auto;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    header .nav-container {
+        display: flex;
+    }
+
+    .dropdown {
+        flex: 1 1 25%;
+        max-width: 25%;
+        margin-left: 0;
+    }
+
+    .dropbtn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .auth-buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+        margin-top: 5px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 300px;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
